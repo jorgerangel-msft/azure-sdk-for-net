@@ -35,12 +35,16 @@ function Refresh-Build {
 
 $testProjectsLocalDir = Join-Path $packageRoot 'generator' 'TestProjects' 'Local'
 $basicTypespecTestProject = Join-Path $testProjectsLocalDir "Basic-TypeSpec"
+$mpfdTypespecTestProject = Join-Path $testProjectsLocalDir "Payload-Multipart"
 $mgmtTypespecTestProject = Join-Path $testProjectsLocalDir "Mgmt-TypeSpec"
 
 Push-Location $packageRoot
 
 Write-Host "Generating test projects ..."
 Refresh-Build
+
+Write-Host "Generating MultipartFormData" -ForegroundColor Cyan
+Invoke-LoggedCommand (Get-TspCommand "$mpfdTypespecTestProject/main.tsp" $mpfdTypespecTestProject)
 
 Write-Host "Generating BasicTypeSpec" -ForegroundColor Cyan
 Invoke-LoggedCommand (Get-TspCommand "$basicTypespecTestProject/Basic-TypeSpec.tsp" $basicTypespecTestProject)
