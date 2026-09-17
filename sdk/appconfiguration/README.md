@@ -6,7 +6,7 @@ Azure App Configuration is a managed service that helps developers centralize th
 
 ## Contributing
 
-See the [CONTRIBUTING.md][contrib] for details on building, testing, and contributing to these libraries.
+See [CONTRIBUTING.md][contrib] for details on building, testing, and contributing to these libraries.
 
 This project welcomes contributions and suggestions. Most contributions require you to agree to a Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us the rights to use your contribution. For details, visit [cla.microsoft.com][cla].
 
